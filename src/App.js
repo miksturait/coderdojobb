@@ -2,6 +2,7 @@ import React from 'react';
 import logo from './logo.svg';
 import './styles/App.css';
 import Calendar from './pages/Calendar'
+import calendar from './data/dataMock.json'
 
 function App() {
   return (
