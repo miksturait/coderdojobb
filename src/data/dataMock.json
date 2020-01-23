@@ -5,7 +5,7 @@
    "topic": "Styling your app",
    "message": "Learn to style your app with CSS and preprocessors",
    "hosts": ["Dawid", "Jasiek"],
-   "isTakingPlace": true
+   "isTakingPlace": false
   },
   {
    "date": "2020-02-06T15:00:00+01:00",
@@ -14,5 +14,5 @@
    "hosts": ["Dawid", "Jasiek", "Michał"],
    "isTakingPlace": true
   }
- ] 
+ ]
 }
