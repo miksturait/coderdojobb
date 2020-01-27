@@ -27,22 +27,21 @@ class Calendar extends React.Component {
     });
   };
 
-  render() {
+  filterByDate = e => {
+    const inputSelectedDate = e.target.value;
+    const filteredMeetings = calendar.filter(meeting => meeting.date.includes(inputSelectedDate))
+    this.setState({
+      filteredMeetings
+    })
+  }
+
+  render () {
     return (
       <div>
-        <label htmlFor="filter">
-          Filter by date or title:
-          <input
-            type="text"
-            name="filter"
-            placeholder="Your search query..."
-            onChange={this.filterMeetings}
-          />
-        </label>
-        <h1>Calendar page!!</h1>
-        {this.state.filteredMeetings.map((meeting, index) => (
-          <Meeting {...meeting} key={index} />
-        ))}
+        <input onChange={this.filterMeetings}/>
+        <input type="date" onChange={this.filterByDate}/>
+        <h1>Calendar page!! </h1>
+        {this.state.filteredMeetings.map((meeting, index) => <Meeting {...meeting} key={index}/>)}
       </div>
     );
   }
