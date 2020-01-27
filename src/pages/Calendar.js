@@ -17,10 +17,19 @@ class Calendar extends React.Component {
     })
   }
 
+  filterByDate = e => {
+    const inputSelectedDate = e.target.value;
+    const filteredMeetings = calendar.filter(meeting => meeting.date.includes(inputSelectedDate))
+    this.setState({
+      filteredMeetings
+    })
+  }
+
   render () {
     return (
       <div>
         <input onChange={this.filterMeetings}/>
+        <input type="date" onChange={this.filterByDate}/>
         <h1>Calendar page!! </h1>
         {this.state.filteredMeetings.map((meeting, index) => <Meeting {...meeting} key={index}/>)}
       </div>
