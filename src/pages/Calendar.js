@@ -11,7 +11,8 @@ class Calendar extends React.Component {
   filterMeetings = event => {
     const inputValue = event.target.value;
 
-    const filteredMeetings = calendar.filter(meeting => meeting.topic.includes(inputValue));
+    const filteredMeetings = calendar.filter(meeting =>
+        (meeting.topic.includes(inputValue) || meeting.date.includes(inputValue)));
     this.setState({
       filteredMeetings
     })
