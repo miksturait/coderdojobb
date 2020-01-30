@@ -1,9 +1,12 @@
 import React, { Component } from 'react'
+import moment from "moment";
 
 class Meeting extends Component {
   render () {
 
-    const { date, topic, message, hosts, isTakingPlace } = this.props
+    const { date, topic, message, hosts, isTakingPlace } = this.props;
+
+    const formattedDate = moment(date).format("DD/MM/YYYY HH:mm");
 
     return (
       <div>
@@ -11,7 +14,7 @@ class Meeting extends Component {
           {topic}
         </h2>
         <small>
-          {date}
+          {formattedDate}
         </small>
         <p>
           {message}

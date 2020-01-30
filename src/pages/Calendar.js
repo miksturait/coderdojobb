@@ -6,16 +6,16 @@ import { calendar } from '../data/dataMock.json'
 class Calendar extends React.Component {
   state = {
     filteredMeetings: calendar
-  }
+  };
 
   filterMeetings = event => {
-    const inputValue = event.target.value
+    const inputValue = event.target.value;
 
-    const filteredMeetings = calendar.filter(meeting => meeting.topic.includes(inputValue))
+    const filteredMeetings = calendar.filter(meeting => meeting.topic.includes(inputValue));
     this.setState({
       filteredMeetings
     })
-  }
+  };
 
   render () {
     return (
