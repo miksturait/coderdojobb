@@ -1,0 +1,18 @@
+{
+  "calendar": [
+    {
+      "date": "2020-01-30T15:00:00+01:00",
+      "topic": "Styling your app",
+      "message": "Learn to style your app with CSS and preprocessors",
+      "hosts": ["Dawid", "Jasiek"],
+      "isTakingPlace": false
+    },
+    {
+      "date": "2020-02-06T15:00:00+01:00",
+      "topic": "API communication",
+      "message": "Connect your app to an API",
+      "hosts": ["Dawid", "Jasiek", "Michał"],
+      "isTakingPlace": true
+    }
+  ]
+}

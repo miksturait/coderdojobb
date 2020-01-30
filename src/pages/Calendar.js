@@ -1,32 +1,51 @@
-import React from 'react'
+import React from 'react';
 
-import Meeting from '../components/Meeting'
-import { calendar } from '../data/dataMock.json'
+import Meeting from '../components/Meeting';
+import { fetchCalendar } from '../client';
 
 class Calendar extends React.Component {
   state = {
-    filteredMeetings: calendar
+    filteredMeetings: [],
+  };
+
+  componentDidMount() {
+    fetchCalendar().then(({ data }) => this.setState(() => ({ filteredMeetings: data })));
+  }
+
+  updateState = data => {
+    this.setState(() => ({ filteredMeetings: data }));
   };
 
   filterMeetings = event => {
     const inputValue = event.target.value;
 
-    const filteredMeetings = calendar.filter(meeting =>
-        (meeting.topic.includes(inputValue) || meeting.date.includes(inputValue)));
+    const filteredMeetings = this.state.filteredMeetings.filter(
+      meeting => meeting.topic.includes(inputValue) || meeting.date.includes(inputValue),
+    );
     this.setState({
-      filteredMeetings
-    })
+      filteredMeetings,
+    });
   };
 
-  render () {
+  render() {
     return (
       <div>
-        <input onChange={this.filterMeetings}/>
-        <h1>Calendar page!! </h1>
-        {this.state.filteredMeetings.map((meeting, index) => <Meeting {...meeting} key={index}/>)}
+        <label htmlFor="filter">
+          Filter by date or title:
+          <input
+            type="text"
+            name="filter"
+            placeholder="Your search query..."
+            onChange={this.filterMeetings}
+          />
+        </label>
+        <h1>Calendar page!!</h1>
+        {this.state.filteredMeetings.map((meeting, index) => (
+          <Meeting {...meeting} key={index} />
+        ))}
       </div>
-    )
+    );
   }
 }
 
-export default Calendar
+export default Calendar;
