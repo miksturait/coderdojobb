@@ -45,8 +45,11 @@ class Calendar extends React.Component {
     console.log(this.state.filteredMeetings)
     return (
       <div>
-        <input onChange={this.filterMeetings}/><br></br>
-        data<input onChange={this.filterDate}></input>
+        Filter by title:
+        <input onChange={this.filterMeetings}/>
+        <br/><br/>
+        Filter by date:
+        <input onChange={this.filterDate}></input>
         <h1>Calendar page!! </h1>
         {this.state.filteredMeetings.map((meeting, index) => <Meeting {...meeting} key={index}/>)}
       </div>
