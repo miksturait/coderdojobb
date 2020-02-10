@@ -6,21 +6,25 @@ import { fetchCalendar } from '../client';
 class Calendar extends React.Component {
   state = {
     filteredMeetings: [],
+    allMeetings: []
   };
 
   componentDidMount() {
-    fetchCalendar().then(({ data }) => this.setState(() => ({ filteredMeetings: data })));
+    fetchCalendar().then(({ data }) =>
+      this.setState(() => ({ allMeetings: data, filteredMeetings: data }))
+    );
   }
 
   updateState = data => {
-    this.setState(() => ({ filteredMeetings: data }));
+    this.setState(() => ({ allMeetings: data }));
   };
 
   filterMeetings = event => {
     const inputValue = event.target.value;
 
-    const filteredMeetings = this.state.filteredMeetings.filter(
-      meeting => meeting.topic.includes(inputValue) || meeting.date.includes(inputValue),
+    const filteredMeetings = this.state.allMeetings.filter(
+      meeting =>
+        meeting.topic.includes(inputValue) || meeting.date.includes(inputValue)
     );
     this.setState({
       filteredMeetings,
