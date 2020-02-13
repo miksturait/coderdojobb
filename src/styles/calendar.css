@@ -1,0 +1,8 @@
+.calendar__filters {
+  background: #ccc;
+  padding: 20px;
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}

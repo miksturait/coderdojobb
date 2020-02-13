@@ -1,0 +1,46 @@
+.meeting__container {
+  padding: 20px;
+  box-shadow: 0 0 5px rgba(0,0,0, 0.5);
+  margin-bottom: 20px;
+  border-radius: 3px;
+  background: #fff;
+}
+
+.meeting__header {
+  font-size: 20px;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  font-weight: 200;
+}
+
+.meeting__date {
+  background: #422c6c;
+  color: #fff;
+  font-size: 14px;
+  padding: 6px 12px;
+  display: inline-block;
+  border-radius: 2px;
+}
+
+.meeting__status {
+  background: transparent;
+  font-size: 14px;
+  padding: 6px;
+  text-align: center;
+  display: block;
+  border-radius: 2px;
+}
+
+.meeting__status.active {
+  border: 1px solid green;
+  color: green;
+} 
+
+.meeting__status.inactive {
+  border: 1px solid red;
+  color: red;
+} 
+
+.meeting__checkbox {
+  display: none;
+}
