@@ -6,10 +6,14 @@ import { fetchCalendar } from '../client';
 class Calendar extends React.Component {
   state = {
     filteredMeetings: [],
+    allMeetings: []
   };
 
   componentDidMount() {
-    fetchCalendar().then(({ data }) => this.setState(() => ({ filteredMeetings: data })));
+    fetchCalendar().then(({ data }) => this.setState(() => ({
+      filteredMeetings: data,
+      allMeetings: data
+    })));
   }
 
   updateState = data => {
@@ -19,7 +23,7 @@ class Calendar extends React.Component {
   filterMeetings = event => {
     const inputValue = event.target.value;
 
-    const filteredMeetings = this.state.filteredMeetings.filter(
+    const filteredMeetings = this.state.allMeetings.filter(
       meeting => meeting.topic.includes(inputValue) || meeting.date.includes(inputValue),
     );
     this.setState({
