@@ -1,0 +1,15 @@
+.app {
+  background: #cccccc;
+  text-align: center;
+}
+
+.app__container {
+  color: #333;
+  font-size: 16px;
+  background: #fff;
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: left;
+  height: 100vh;
+  padding: 20px;
+}
