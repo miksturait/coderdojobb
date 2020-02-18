@@ -1,11 +1,15 @@
 .meeting__container {
   padding: 20px;
-  box-shadow: 0 0 5px rgba(0,0,0, 0.5);
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
   margin-bottom: 20px;
   border-radius: 3px;
   background: #fff;
 }
-
+@media (min-width: 800px) {
+  .meeting {
+    width: 32%;
+  }
+}
 .meeting__header {
   font-size: 20px;
   margin-bottom: 10px;
@@ -34,12 +38,12 @@
 .meeting__status.active {
   border: 1px solid green;
   color: green;
-} 
+}
 
 .meeting__status.inactive {
   border: 1px solid red;
   color: red;
-} 
+}
 
 .meeting__checkbox {
   display: none;
