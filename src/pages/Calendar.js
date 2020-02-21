@@ -36,7 +36,7 @@ class Calendar extends React.Component {
       <div className="calendar">
         <div className="calendar__container">
           <div className="calendar__filters">
-            <div className="calendar__filter">Home</div>
+            <div className="calendar__filter">Calendar APP</div>
             <div className="calendar__filter">
               <label htmlFor="filter">
                 Filter by date or title:

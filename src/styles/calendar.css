@@ -1,8 +1,50 @@
 .calendar__filters {
-  background: #ccc;
-  padding: 20px;
+  background: #875FC0;
+  padding: 30px;
   margin-bottom: 20px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  border-radius: 15px;
+  color: white;
+  box-shadow: 0px 0px 4px rgb(0,0,0, 0.4);
+  position: sticky;
+  top: 15px;
+}
+
+input.calendar__input {
+  margin-left: 20px;
+  background-color: #d1bbeb;
+  border: none;
+  border-radius: 15px;
+  padding: 10px;
+}
+@media screen and (max-width: 670px)
+{
+  .calendar__filters {
+    text-align: center;
+    padding: 20px;
+   
+  }
+
+  .calendar__filters {
+    flex-direction: column;
+  }
+
+  .calendar__filter
+  {
+    margin-top: 10px;
+  }
+
+}
+
+@media screen and (max-width: 405px)
+{
+  input.calendar__input
+  {
+    text-align: center;
+    margin-left: 0px;
+    margin-top: 10px;
+  }
+
 }
