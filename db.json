@@ -19,6 +19,26 @@
         "Jasiek",
         "Michał"
       ],
+      "isTakingPlace": false
+    },
+    {
+      "date": "2020-02-27T15:00:00+01:00",
+      "topic": "Kulturalne spotkanko 4",
+      "message": "Temat kulturalnego spotkanka 4",
+      "hosts": [
+        "Dawid",
+        "Jasiek"
+      ],
+      "isTakingPlace": true
+    },
+    {
+      "date": "2020-03-05T15:00:00+01:00",
+      "topic": "Kulturalne spotkanko 5",
+      "message": "Temat kulturalnego spotkanka 5",
+      "hosts": [
+        "Jasiek",
+        "Michał"
+      ],
       "isTakingPlace": true
     }
   ]
