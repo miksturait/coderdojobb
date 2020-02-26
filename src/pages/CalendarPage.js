@@ -49,9 +49,9 @@ class Calendar extends React.Component {
               </label>
             </div>
           </div>
-          {this.state.filteredMeetings.map((meeting, index) => (
-            <Meeting {...meeting} key={index} />
-          ))}
+            {this.state.filteredMeetings.map((meeting, index) => (
+              <Meeting {...meeting} key={index} />
+            ))}
         </div>
       </div>
     );

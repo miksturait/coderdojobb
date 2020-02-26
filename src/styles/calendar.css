@@ -2,7 +2,21 @@
   background: #ccc;
   padding: 20px;
   margin-bottom: 20px;
-  display: flex;
-  flex-direction: row;
+  display: inline-block;
   justify-content: space-between;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 5px;
+  width: 100%;
+}
+
+.calendar__container {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  float: left;
+  justify-content: space-evenly;
+  width: 100%;
+}
+.calendar {
 }

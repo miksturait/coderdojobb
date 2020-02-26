@@ -5,7 +5,13 @@
   border-radius: 3px;
   background: #fff;
 }
-
+.meeting{
+  margin: 20px;
+  display: flex;
+  justify-content: space-evenly;
+  flex-grow: 1;
+  flex-basis: 0;
+}
 .meeting__header {
   font-size: 20px;
   margin-bottom: 10px;
@@ -39,8 +45,20 @@
 .meeting__status.inactive {
   border: 1px solid red;
   color: red;
-} 
+}
 
 .meeting__checkbox {
   display: none;
+}
+@media screen and (max-width: 800px) {
+  .meeting__container {
+    width: 56.25%;
+  }
+}
+
+@media screen and (max-width: 400) {
+  .meeting__container {
+    display: block;
+    width: 100%
+  }
 }
