@@ -1,5 +1,5 @@
 .app {
-  background: #cccccc;
+  background: white;
   text-align: center;
 }
 
@@ -7,9 +7,28 @@
   color: #333;
   font-size: 16px;
   background: #fff;
-  max-width: 800px;
+  max-width: 70%;
   margin: 0 auto;
   text-align: left;
   height: 100vh;
   padding: 20px;
 }
+
+@media screen and (max-width: 1000px) {
+ 
+  .app__container{
+    max-width: 85%;
+  }
+
+}
+
+@media screen and (max-width: 600px) {
+ 
+  .app__container{
+    max-width: 95%;
+  }
+
+}
+
+
+

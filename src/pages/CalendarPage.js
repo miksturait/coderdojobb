@@ -36,11 +36,11 @@ class Calendar extends React.Component {
       <div className="calendar">
         <div className="calendar__container">
           <div className="calendar__filters">
-            <div className="calendar__filter">Home</div>
+            <div className="calendar__filterName"><h2>Calendar APP</h2></div>
             <div className="calendar__filter">
               <label htmlFor="filter">
                 Filter by date or title:
-                <input
+                <input className="calendar__input"
                   type="text"
                   name="filter"
                   placeholder="Your search query..."
@@ -49,9 +49,11 @@ class Calendar extends React.Component {
               </label>
             </div>
           </div>
-          {this.state.filteredMeetings.map((meeting, index) => (
-            <Meeting {...meeting} key={index} />
-          ))}
+          <div className="meetings__container">
+            {this.state.filteredMeetings.map((meeting, index) => (
+              <Meeting {...meeting} key={index} />
+            ))}
+          </div>
         </div>
       </div>
     );
