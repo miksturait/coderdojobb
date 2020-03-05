@@ -1,6 +1,7 @@
 {
   "calendar": [
     {
+      "id": 1,
       "date": "2020-01-30T15:00:00+01:00",
       "topic": "Styling your app",
       "message": "Learn to style your app with CSS and preprocessors",
@@ -8,9 +9,11 @@
         "Dawid",
         "Jasiek"
       ],
-      "isTakingPlace": false
+      "isTakingPlace": false,
+      "resources": ["google.pl","selleo.com"]
     },
     {
+      "id": 2,
       "date": "2020-02-06T15:00:00+01:00",
       "topic": "API communication",
       "message": "Connect your app to an API",
