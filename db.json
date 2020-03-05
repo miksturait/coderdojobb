@@ -10,7 +10,10 @@
         "Jasiek"
       ],
       "isTakingPlace": false,
-      "resources": ["google.pl","selleo.com"]
+      "resources": [
+        "google.pl",
+        "selleo.com"
+      ]
     },
     {
       "id": 2,
@@ -23,6 +26,13 @@
         "Michał"
       ],
       "isTakingPlace": true
+    }
+  ],
+  "users": [
+    {
+      "email": "1@1.pl",
+      "password": "123",
+      "id": 1
     }
   ]
 }

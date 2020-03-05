@@ -16,11 +16,11 @@ const Calendar = () => {
   },[])
 
   const filterMeetings = event => {
-    const inputValue = event.target.value;
+    const inputValue = event.target.value.toLowerCase()
 
     const filteredMeetings = allMeetings.filter(
-      meeting =>
-        meeting.topic.includes(inputValue) || meeting.date.includes(inputValue)
+      ({topic, date}) =>
+        topic.toLowerCase().includes(inputValue) || date.toLowerCase().includes(inputValue)
     );
     setFilteredMeetings(filteredMeetings)
   };

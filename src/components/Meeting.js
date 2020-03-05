@@ -9,7 +9,7 @@ const Meeting = ({ id, date, topic, message, hosts, isTakingPlace }) => {
 
     return (
       <div className="meeting">
-        <div className="meeting__container">
+        <div className="card">
           <Link to={`meetings/${id}`}>
           <div className="meeting__header">
             <h2>{topic}</h2>

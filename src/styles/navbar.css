@@ -3,19 +3,3 @@
     justify-content: space-between;
     padding-bottom: 16px;
 }
-
-.btn{
-    background: #422c6c;
-    color: #FFF;
-    padding: 8px;
-    border: 1px solid #422c6c;
-    border-radius: 8px;
-    text-decoration: none;
-    cursor: pointer;
-    font-size: 16px;
-    line-height: 24px;
-}
-.btn:hover{
-    background: #372459;
-    border-color: #372459;
-}

@@ -1,3 +1,7 @@
+* {
+  box-sizing: border-box;
+}
+
 .app {
   background: #cccccc;
   text-align: center;
@@ -12,4 +16,39 @@
   text-align: left;
   height: 100vh;
   padding: 20px;
+}
+
+.card {
+  padding: 20px;
+  box-shadow: 0 0 5px rgba(0,0,0, 0.5);
+  margin-bottom: 20px;
+  border-radius: 3px;
+  background: #fff;
+}
+
+.btn{
+  color: #422c6c;
+  padding: 8px;
+  border: 1px solid #422c6c;
+  border-radius: 8px;
+  text-decoration: none;
+  cursor: pointer;
+  font-size: 16px;
+  line-height: 24px;
+  margin-right: 5px;
+}
+
+.btn.primary {
+  color: #FFF;
+  background: #422c6c;
+}
+
+.btn:hover{
+  background: #ccc;
+  border-color: #372459;
+}
+
+.btn.primary:hover{
+  background: #372459;
+  border-color: #372459;
 }

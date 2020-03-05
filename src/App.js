@@ -6,11 +6,14 @@ import {
 } from 'react-router-dom'
 
 import CalendarPage from './pages/CalendarPage'
-import './styles/index.css'
 import MeetingPage from './pages/MeetingPage'
-import { AuthProvider } from './context/auth-context'
+import LoginPage from './pages/LoginPage'
+
 import ProtectedRoute from './components/ProtectedRoute'
 import Navbar from './components/Navbar'
+
+import { AuthProvider } from './context/auth-context'
+import './styles/index.css'
 
 const App = () => (
   <Router>
@@ -20,6 +23,7 @@ const App = () => (
           <Navbar/>
           <Switch>
             <ProtectedRoute path="/meetings/:id" component={MeetingPage}/>
+            <Route path="/login" component={LoginPage}/>
             <Route path="/" component={CalendarPage}/>
           </Switch>
         </div>

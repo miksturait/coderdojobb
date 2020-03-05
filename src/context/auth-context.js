@@ -4,8 +4,15 @@ const AuthContext = React.createContext()
 
 export const AuthProvider = ({children}) => {
   const [loggedIn, setLoggedIn] = useState(false)
+  const [token, setToken] = useState(null)
+
+  const handleSetToken = token => {
+    console.log(token, 'token auth')
+    setToken(token)
+  }
+
   return (
-    <AuthContext.Provider value={{loggedIn, setLoggedIn}}>
+    <AuthContext.Provider value={{loggedIn, setLoggedIn, handleSetToken}}>
       {children}
     </AuthContext.Provider>
   )

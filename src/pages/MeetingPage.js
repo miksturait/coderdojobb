@@ -10,7 +10,7 @@ const MeetingPage = () => {
 
   useEffect(()=>{
     fetchMeeting(id).then(response=>setMeetingDetails(response.data))
-  },[])
+  },[id])
 
   return (
     <div>
