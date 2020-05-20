@@ -1,0 +1,49 @@
+openapi: 3.0.0
+info:
+  description: Short API description
+  version: "0.1"
+  title: API Documentation Title
+  termsOfService: ""
+  contact:
+    email: email@example.com
+    url: http://example.com
+  license:
+    name: MIT License
+    url: https://opensource.org/licenses/mit-license.php
+servers:
+  - url: http://api.example.com
+tags:
+  - name: project
+    description: Operations on projects
+paths:
+  /projects:
+    get:
+      tags:
+        - project
+      description: Get all projects
+      operationId: findProjects
+      responses:
+        "200":
+          description: Successful operation
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/Project"
+components:
+  schemas:
+    Project:
+      type: object
+      required:
+        - id
+        - name
+      properties:
+        id:
+          type: integer
+          format: int64
+        name:
+          type: string
+externalDocs:
+  description: Find out more about our project
+  url: https://example.com/docs/
